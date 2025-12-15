@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A Bash script that runs an infinite loop until CTRL+C is pressed
+
+trap "echo 'Infinity stopped!'; exit" SIGINT
+
+while true; do
+    sleep 1
+done
