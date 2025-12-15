@@ -2,4 +2,4 @@
 # A Bash script that lists all processes owned by the current user
 
 # Your command here
-ps
+pid
