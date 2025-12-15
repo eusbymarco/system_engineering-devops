@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
-# A Bash script that runs an infinite loop until CTRL+C is pressed
-
-trap "echo 'Infinity stopped!'; exit" SIGINT
+# A Bash script that displays "To infinity and beyond" indefinitely with a 2-second pause
 
 while true; do
-    sleep 1
+    echo "To infinity and beyond"
+    sleep 2
 done
+
