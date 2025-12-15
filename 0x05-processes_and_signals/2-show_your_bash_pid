@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# A Bash script that shows the process tree of the current shell
+
+# Your command here
+pstree $$
