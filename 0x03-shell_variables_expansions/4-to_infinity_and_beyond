@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# A Bash script that runs an infinite loop
+
+while true; do
+    sleep 1
+done
