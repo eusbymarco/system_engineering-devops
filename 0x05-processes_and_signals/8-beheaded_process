@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# A Bash script that ignores the SIGHUP signal and keeps running
+
+# Ignore SIGHUP (hangup) signal
+trap "" SIGHUP
+
+# Infinite loop
+while true; do
+    echo "I am still running after terminal closed"
+    sleep 2
+done
