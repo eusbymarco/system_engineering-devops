@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# A Bash script that displays the PID of the current Bash shell in an easy way
+
+echo "The PID of this Bash shell is $$"
