@@ -1,23 +1,10 @@
 #!/usr/bin/env bash
-# A Bash script that ensures only one instance of itself is running
+# A Bash script that prints "I am invincible!!!" when receiving a SIGTERM signal
 
-# Lock file location
-LOCKFILE="/tmp/highlander.lock"
+# Trap SIGTERM and print message instead of terminating
+trap "echo 'I am invincible!!!'" SIGTERM
 
-# Check if another instance is running
-if [ -e "$LOCKFILE" ] && kill -0 "$(cat $LOCKFILE)" 2>/dev/null; then
-    echo "Another instance is already running. Exiting."
-    exit 1
-fi
-
-# Save current PID to lock file
-echo $$ > "$LOCKFILE"
-
-# Remove lock file on exit
-trap "rm -f $LOCKFILE" EXIT
-
-# Infinite loop to keep the script running
+# Infinite loop
 while true; do
-    echo "There can be only one"
-    sleep 2
+    sleep 1
 done
