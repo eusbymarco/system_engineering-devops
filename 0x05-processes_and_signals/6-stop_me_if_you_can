@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A Bash script that runs indefinitely and can be stopped with CTRL+C
+
+# Infinite loop
+while true; do
+    echo "Stop me if you can"
+    sleep 2
+done
