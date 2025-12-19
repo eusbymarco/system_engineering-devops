@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script reads lines from stdin and writes them to stdout or to a file if provided
+
+# Check if a filename is passed as argument
+if [ -z "$1" ]; then
+  # No file provided, read from stdin and print to stdout
+  while read line
+  do
+    echo "$line"
+  done
+else
+  # File provided, write input to the file
+  while read line
+  do
+    echo "$line" >> "$1"
+  done
+fi
