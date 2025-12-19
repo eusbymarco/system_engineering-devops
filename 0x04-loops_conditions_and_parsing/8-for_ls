@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# This script lists all files in the current directory using a for loop
+# It prints each file name, including itself
+
+for file in *
+do
+  echo "$file"
+done
