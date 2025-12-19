@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 10 using a while loop
+# If the number is 4, it prints "4 is your lucky number"
+# If the number is 8, it prints "Bad luck 8"
+# Otherwise, it prints the number
+
+count=1
+while [ "$count" -le 10 ]
+do
+  if [ "$count" -eq 4 ]
+  then
+    echo "4 is your lucky number"
+  elif [ "$count" -eq 8 ]
+  then
+    echo "Bad luck 8"
+  else
+    echo "$count"
+  fi
+  ((count++))
+done
