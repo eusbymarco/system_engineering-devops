@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
-# This script reads lines from stdin and writes them to stdout or to a file if provided
+# This script checks if a file exists and is a regular file
 
-# Check if a filename is passed as argument
-if [ -z "$1" ]; then
-  # No file provided, read from stdin and print to stdout
-  while read line
-  do
-    echo "$line"
-  done
+if [ -f "$1" ]; then
+  echo "File exist and is a regular file"
 else
-  # File provided, write input to the file
-  while read line
-  do
-    echo "$line" >> "$1"
-  done
+  echo "$1 doesn’t exist"
 fi
