@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# This script displays numbers from 1 to 20 using a while loop
+# If the number contains 9, it prints "9 is an unlucky number"
+# Otherwise, it prints the number
+
+count=1
+while [ "$count" -le 20 ]
+do
+  if [[ "$count" == *9* ]]
+  then
+    echo "9 is an unlucky number"
+  else
+    echo "$count"
+  fi
+  ((count++))
+done
